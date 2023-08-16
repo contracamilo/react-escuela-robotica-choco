@@ -14,7 +14,7 @@ Comunidad Activa: Los estudiantes y profesores de la Escuela de Robótica del Ch
 - Explora los diferentes módulos de aprendizaje en la carpeta correspondiente.
 - Sigue los ejercicios y el código para aprender y practicar los conceptos presentados.
 - Siéntete libre de modificar, mejorar y personalizar los ejemplos para adaptarlos a tus necesidades.
-- Este proyecto es un esfuerzo continuo para empoderar a los jóvenes del Chocó con habilidades en robótica y programación, y esperamos que sea una experiencia educativa enriquecedora y emocionante. ¡Únete a nosotros en este emocionante viaje de aprendizaje y exploración robótica con React!
+- Este proyecto es un esfuerzo continuo para empoderar a los jóvenes del Chocó con habilidades en robótica y programación, y esperamos que sea una experiencia educativa enriquecedora y emocionante. ¡Únete a nosotros en este emocionante viaje de aprendizaje y exploración con React!
 
 
 
