@@ -1,70 +1,55 @@
 import './App.css';
+import ShoppingItem from './components/ShoppingItem/ShoppingItem'
 
 function App() {
-
-  const names = ["Juliana", "Daniel", "Josser", "Ferly", "Alejandro"]
-  const randomNumber = Math.floor(Math.random()*5)
-  const compraInicial = 50000
-  const deudaPagada = 21234
-  const isLogged = false
-  const color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-
   const listaMercado = [
     {
       nombre: 'Manzana',
       tipo: 'fruta',
-      color: 'red'
+      color: 'red',
+      image: 'https://healthjade.com/wp-content/uploads/2017/10/apple-fruit.jpg'
     },
     {
       nombre: 'Limon',
       tipo: 'fruta',
-      color: 'green'
+      color: 'green',
+      image: 'https://www.spa-puntacana.com/wp-content/uploads/2016/03/news_photo_04.jpg'
     },
     {
       nombre: 'Zanahoria',
       tipo: 'verdura',
-      color: 'orange'
+      color: 'orange',
+      image: 'https://www.mercadoscampesinos.gov.co/wp-content/uploads/2021/04/zanahorias.jpg'
     },
     {
       nombre: 'Pescado',
       tipo: 'proteina',
-      color: 'brown'
+      color: 'brown',
+      image: 'https://comidaecuatoriana.com.es/wp-content/uploads/2020/01/arroz-con-pescado-frito-scaled.jpg'
     }
   ]
 
-  const listaFrutas = listaMercado.filter((item)=> item.tipo === 'fruta')
-  const listaVerduras = listaMercado.filter((item)=> item.tipo === 'verdura')
+  const post = [
+    {
+      user: 'pepito',
+      likes: 30,
+      saved: true,
+      image: '/img1.jpg',
+      caption: 'hola, mi foto'
+    }
+  ]
 
   return (
     <div className="App">
 
-    <h1 style={{backgroundColor: color}}>Hola {names[randomNumber]} </h1>
-    <h2>compraste: {compraInicial}</h2>
-    <h2>Has pagado: {deudaPagada}</h2>
-    <h2>Debes: {compraInicial - deudaPagada}</h2>
-    {
-      isLogged? <h3>Si estas loggeada</h3> : <h3>NO estas loggeada</h3>
-    }
-    <h2>Lista de mercado:</h2>
-    <ul>
-    {
-      listaMercado.map((item)=> <li style={{color: item.color}}>{item.nombre}</li> )
-    }
-</ul>
+<h2>Aqui estan los components : </h2>
+<section className="shopping-list">
+{
+  listaMercado.map((item)=> <ShoppingItem name={item.nombre} type={item.tipo} image={item.image}/>)
+}  
 
-<h2>Lista de frutas:</h2>
-    <ul>
-    {
-      listaFrutas.map((item)=> <li style={{color: item.color}}>{item.nombre}</li> )
-    }
-</ul>
 
-<h2>Lista de verduras:</h2>
-    <ul>
-    {
-      listaVerduras.map((item)=> <li style={{color: item.color}}>{item.nombre}</li> )
-    }
-</ul>
+</section>
     </div>
   );
 }
