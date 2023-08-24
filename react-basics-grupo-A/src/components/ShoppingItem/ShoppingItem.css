@@ -1,0 +1,18 @@
+.shopping-item{
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    background-color: #DDD;
+}
+
+.shopping-item img{
+    width: 100%;
+}
+
+.selected-title{
+    font-size: 25pt;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
