@@ -2,7 +2,7 @@
 import './ShoppingItem.css'
 import { useState } from 'react'
 
-function ShoppingItem({name, type, image, color}){
+function ShoppingItem({name, type, image, color, viewProfile}){
 
     const [selected, setSelected] = useState(false)
 
@@ -10,6 +10,7 @@ function ShoppingItem({name, type, image, color}){
     function handleClick(){
         // alert('Diste click a '+ name)
         setSelected(!selected)
+        viewProfile({name, type, image, color})
     }
 
     // lo que voy a renderizar

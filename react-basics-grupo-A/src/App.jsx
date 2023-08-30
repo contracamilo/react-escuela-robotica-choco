@@ -1,16 +1,14 @@
 import './App.css'
-import ShoppingItem from './components/ShoppingItem/ShoppingItem'
+import ShoppingArea from './components/ShoppingArea/ShoppingArea'
+import { useState } from 'react'
 
 function App() {
-/*
-  const nombre = "Mundo Juliana";
-  const nombres = ["Juli", "Jordan", "Naida", "Arinson", "Vilvic"];
-  const randomNumber = ~~(Math.random()*5); // Math.floor() === ~~
 
-  const pagoInicial = 50000;
-  const hePagado = 33532;
+  const [selected, setshoppingItem] = useState(false)
 
-  const isLogged = true;*/
+  const updateShoppingItem = (item) => {
+    setshoppingItem(item)
+  }
 
   const mercado = [
     {
@@ -43,54 +41,20 @@ function App() {
       color: "yellow",
       image: "https://i.pinimg.com/1200x/d2/0d/d0/d20dd00eb3611869b3580c80d40bb70e.jpg"
     }
-  ]
+  ];
 
   const frutas = mercado.filter((item)=> item.type === 'fruit')
   const proteinas = mercado.filter((item)=> item.type === 'protein')
 
   return (
     <>
-      {/* <h1 style={{color: isLogged?'green': 'red'}}>Hola {nombre}!</h1>
-      <h1 className="main-title">Hola {nombres[randomNumber]}!</h1>
-      <h2>Compraste: {pagoInicial}</h2>
-      <h2>Pagaste: {hePagado}</h2>
-      <h2>Debes: {pagoInicial-hePagado}</h2>
-
-      {
-       isLogged ? <h1 style={{color: 'green'}}>Estas Loggeado</h1> : <h1 style={{color: 'red'}}>NO Estas Loggeado</h1>
-      }
-
-      <h2>Lista Mercado:</h2>
-      <ul style={{backgroundColor:'gray'}}>
-        {
-          mercado.map((item)=> <li key={item.name} style={{color: item.color}}>{item.name}</li>)
-        }
-      </ul>
-      <h2>Lista De frutas:</h2>
-      <ul>
-        {
-          frutas.map((item)=> <li key={item.name} style={{color: item.color}}>{item.name}</li>)
-        }
-      </ul>
-      <h2>Lista De proteinas:</h2>
-      <ul>
-        {
-          proteinas.map((item)=> <li key={item.name} style={{color: item.color}}>{item.name}</li>)
-        }
-      </ul> */}
-
       <h1>Lista de componentes</h1>
-      <section className='shopping-item-list'>
-      {
-        mercado.map((item)=> 
-        <ShoppingItem 
-        name={item.name} 
-        type={item.type} 
-        image={item.image} 
-        color={item.color}/> )
-      }
-
-      </section>
+      { !selected ? 
+        <ShoppingArea 
+          mercado={mercado}
+          updateShoppingItem={updateShoppingItem}
+        /> 
+        : <span>seleccionaste algo</span>}
     </>
   )
 }
