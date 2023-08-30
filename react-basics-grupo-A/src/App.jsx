@@ -49,12 +49,16 @@ function App() {
   return (
     <>
       <h1>Lista de componentes</h1>
-      { !selected ? 
+      {/* { !selected ? 
         <ShoppingArea 
           mercado={mercado}
           updateShoppingItem={updateShoppingItem}
         /> 
-        : <span>seleccionaste algo</span>}
+        : <span>seleccionaste algo</span>} */}
+        <ShoppingArea 
+          mercado={mercado}
+          updateShoppingItem={updateShoppingItem}
+        /> 
     </>
   )
 }

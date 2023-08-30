@@ -11,7 +11,7 @@ function ShoppingArea({mercado, updateShoppingItem}) {
             type={item.type} 
             image={item.image} 
             color={item.color}
-            viewProfile={updateShoppingItem}
+            //viewProfile={updateShoppingItem}
         /> 
         )
       }
