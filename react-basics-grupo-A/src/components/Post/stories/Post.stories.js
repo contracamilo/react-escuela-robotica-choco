@@ -10,7 +10,7 @@ const generarPosts = (length) => (
     Array.from(Array(length)).map(()=>({
         name: faker.person.fullName(),
         color: "faker.color.random()",
-        type: "type",
+        type: faker.internet.userName(),
         image: faker.image.avatar(),
         
     }))
