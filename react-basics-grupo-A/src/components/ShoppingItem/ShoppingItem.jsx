@@ -20,9 +20,9 @@ function ShoppingItem({name, type, image, color}){
         <img onClick={handleClick} src={image} alt="" />
         <h2 className={selected? 'selected-title': ''}>{name}</h2>
         <h3>Tipo: {type}</h3>
-        <div>
+        <div className='counter'>
             <button>-</button>
-            <span>{count}</span>
+            <span> {count} </span>
             <button>+</button>
         </div>
         </article>
