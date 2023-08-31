@@ -5,6 +5,15 @@ import { useState } from 'react'
 function ShoppingItem({name, type, image, color}){
 
     const [selected, setSelected] = useState(true)
+    const [count, setCount] = useState(0);
+
+    function increment () {
+        setCount((prevCount) => prevCount + 1)
+    }
+
+    function decrement () {
+        setCount((prevCount) => prevCount - 1)
+    }
 
     // variables, funciones
     function handleClick(){
@@ -21,9 +30,9 @@ function ShoppingItem({name, type, image, color}){
         <h2 className={selected? 'selected-title': ''}>{name}</h2>
         <h3>Tipo: {type}</h3>
         <div className='counter'>
-            <button>-</button>
+            <button onClick={decrement}>-</button>
             <span> {count} </span>
-            <button>+</button>
+            <button onClick={increment}>+</button>
         </div>
         </article>
 }
