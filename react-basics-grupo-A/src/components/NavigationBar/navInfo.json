@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "https://cdn-icons-png.flaticon.com/128/5948/5948524.png",
+        "action": "Home"
+    },
+    {
+        "icon": "https://cdn-icons-png.flaticon.com/128/9454/9454103.png",
+        "action": "Search"
+    },
+    {
+        "icon": "https://cdn-icons-png.flaticon.com/128/4406/4406266.png",
+        "action": "Explore"
+    },
+    {
+        "icon": "https://cdn-icons-png.flaticon.com/128/5948/5948543.png",
+        "action": "Reels"
+    },
+    {
+        "icon": "https://cdn-icons-png.flaticon.com/128/3421/3421727.png",
+        "action": "Messages"
+    },
+    {
+        "icon": "https://cdn-icons-png.flaticon.com/128/1628/1628948.png",
+        "action": "Create"
+    }
+]

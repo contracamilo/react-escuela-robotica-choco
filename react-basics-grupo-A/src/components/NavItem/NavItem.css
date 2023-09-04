@@ -1,0 +1,20 @@
+/* src/components/NavItem/NavItem.css */
+
+.navItem {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+}
+
+.navItem-icon {
+    height: 21px;
+    max-height: 21px;
+}
+.navItem-action {
+    padding-left: 10px;
+}
+
+.navItem-icon img {
+    height: 25px;
+}
+

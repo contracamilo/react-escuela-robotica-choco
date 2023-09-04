@@ -1,26 +1,17 @@
-import Post from "../Post.jsx"
-import { faker }  from "@faker-js/faker"
+import Post from "../Post";
+import { faker } from "@faker-js/faker";
 
+//config
 export default {
-    title: "ClaseA/Post",
+    title: "Posts/Un Solo Post",
     component: Post,
 }
 
-const generarPosts = (length) => (
-    Array.from(Array(length)).map(()=>({
-        name: faker.person.fullName(),
-        color: "faker.color.random()",
-        type: faker.internet.userName(),
-        image: faker.image.avatar(),
-        
-    }))
-)
-
-export const PostStory = {
+export const InstaStory = {
     args: {
-        title: "Mi titulo",
-        postContent: "lorem ipsum",
-        cards: generarPosts(7)
-    },
+        username: faker.person.firstName(), 
+        name: faker.person.fullName(), 
+        photo: faker.image.urlLoremFlickr(), 
+        profilePic: faker.image.avatar(),
+    }
 }
-

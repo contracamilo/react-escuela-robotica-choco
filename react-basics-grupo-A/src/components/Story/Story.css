@@ -1,0 +1,38 @@
+/* src/components/Story/Story.css */
+.story{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: min-content;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 7px;
+  flex-flow: column;
+}
+.story-image{
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+}
+.story-image-closeFriends {
+  border: 3px solid #22c40d;
+}
+.story-image-noVisto {
+  border: 3px solid #de39db;
+}
+.story-image-visto {
+  border: 3px solid #bbbbbb;
+}
+
+/* BEM 
+story__image--closeFriends
+story__image--visto
+story__image--noVisto
+story__name
+
+Block - nombre de la clase
+Element - se representa con __
+Modifier - se reprenta --
+*/
