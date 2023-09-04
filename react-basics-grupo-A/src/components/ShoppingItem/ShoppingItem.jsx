@@ -1,11 +1,32 @@
 /* eslint-disable react/prop-types */
 import './ShoppingItem.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function ShoppingItem({name, type, image, color}){
 
     const [selected, setSelected] = useState(true)
     const [count, setCount] = useState(0);
+    
+    useEffect(() => {
+        console.log('onRender')
+    });
+
+    useEffect(() => {
+        console.log('onMount')
+    }, []);
+
+    useEffect(() => {
+        console.log('UseEffect function')
+        return () => {
+            console.log('useEffect return')
+        }
+    })
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/posts/1')
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+    })
 
     function increment () {
         setCount((prevCount) => prevCount + 1)

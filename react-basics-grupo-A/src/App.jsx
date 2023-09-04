@@ -1,6 +1,6 @@
 import './App.css'
 import ShoppingArea from './components/ShoppingArea/ShoppingArea'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
 
@@ -46,9 +46,20 @@ function App() {
   const frutas = mercado.filter((item)=> item.type === 'fruit')
   const proteinas = mercado.filter((item)=> item.type === 'protein')
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  function handleResize () {
+    setWindowWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+  })
+
   return (
     <>
       <h1>Lista de componentes</h1>
+      windowWidth: {windowWidth}
       {/* { !selected ? 
         <ShoppingArea 
           mercado={mercado}
