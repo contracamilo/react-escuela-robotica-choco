@@ -67,6 +67,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={theme}>
+        {theme === "dark" ? <h1>Like</h1> : <p>No Like</p>}
         <h1>Lista de componentes</h1>
         windowWidth: {windowWidth}
         {/* { !selected ?
