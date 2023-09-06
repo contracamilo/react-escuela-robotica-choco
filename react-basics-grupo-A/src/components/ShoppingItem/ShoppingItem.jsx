@@ -1,31 +1,33 @@
 /* eslint-disable react/prop-types */
-import './ShoppingItem.css'
-import { useState } from 'react'
+import "./ShoppingItem.css";
+import { useState } from "react";
 
-function ShoppingItem({name, type, image, color}){
+function ShoppingItem({ name, type, image, color }) {
+  const [selected, setSelected] = useState(true);
 
-    const [selected, setSelected] = useState(true)
+  // variables, funciones
+  function handleClick() {
+    // alert('Diste click a '+ name)
+    setSelected(!selected);
+    // viewProfile({name, type, image, color})
+  }
 
-    // variables, funciones
-    function handleClick(){
-        // alert('Diste click a '+ name)
-        setSelected(!selected)
-        // viewProfile({name, type, image, color})
-    }
-
-    // lo que voy a renderizar
-    return <article
-            style={{backgroundColor: selected? color : ''}} 
-            className="shopping-item">
-        <img onClick={handleClick} src={image} alt="" />
-        <h2 className={selected? 'selected-title': ''}>{name}</h2>
-        <h3>Tipo: {type}</h3>
-        <div className='counter'>
-            <button>-</button>
-            <span> {count} </span>
-            <button>+</button>
-        </div>
-        </article>
+  // lo que voy a renderizar
+  return (
+    <article
+      style={{ backgroundColor: selected ? color : "" }}
+      className="shopping-item"
+    >
+      <img onClick={handleClick} src={image} alt="" />
+      <h2 className={selected ? "selected-title" : ""}>{name}</h2>
+      <h3>Tipo: {type}</h3>
+      <div className="counter">
+        <button>-</button>
+        <span> 0 </span>
+        <button>+</button>
+      </div>
+    </article>
+  );
 }
 
-export default ShoppingItem
+export default ShoppingItem;
