@@ -4,7 +4,16 @@ import { useState } from 'react'
 
 function ShoppingItem({name, type, image, color}){
 
-    const [selected, setSelected] = useState(false)
+    const [selected, setSelected] = useState(true)
+    const [count, setCount] = useState(0);
+
+    function increment () {
+        setCount((prevCount) => prevCount + 1)
+    }
+
+    function decrement () {
+        setCount((prevCount) => prevCount - 1)
+    }
 
     // variables, funciones
     function handleClick(){
@@ -15,12 +24,16 @@ function ShoppingItem({name, type, image, color}){
 
     // lo que voy a renderizar
     return <article
-            onClick={handleClick}
             style={{backgroundColor: selected? color : ''}} 
             className="shopping-item">
-        <img src={image} alt="" />
+        <img onClick={handleClick} src={image} alt="" />
         <h2 className={selected? 'selected-title': ''}>{name}</h2>
         <h3>Tipo: {type}</h3>
+        <div className='counter'>
+            <button onClick={decrement}>-</button>
+            <span> {count} </span>
+            <button onClick={increment}>+</button>
+        </div>
         </article>
 }
 
