@@ -1,34 +1,37 @@
 import "./App.css";
 import ShoppingArea from "./components/ShoppingArea/ShoppingArea";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [selected, setshoppingItem] = useState(false);
+  const [userName, setUserName] = useState("Pepe");
 
-  useEffect(() => {
-    console.log("onRender");
-  });
-
-  useEffect(() => {
-    console.log("onMount");
-  }, []);
-
-  useEffect(() => {
-    console.log("UseEffect function");
-    return () => {
-      console.log("useEffect return");
-    };
-  });
-
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts`)
-      .then((response) => response.json())
-      .then((json) => console.log(json));
-  }, []);
+  const [theme, setTheme] = useState("dark");
 
   const updateShoppingItem = (item) => {
     setshoppingItem(item);
   };
+
+  function handleUserNameChange() {
+    setUserName("Pepito");
+  }
+
+  function handleThemeChange() {
+    setTheme(theme === "dark" ? "light" : "dark");
+  }
+
+  useEffect(() => {
+    console.log("render");
+  });
+
+  useEffect(() => {
+    console.log("montado");
+    return () => console.log("desmontado");
+  }, []);
+
+  useEffect(() => {
+    console.log("Solo cuando cambia UserName:", userName);
+  }, [userName]);
 
   const mercado = [
     {
@@ -71,16 +74,6 @@ function App() {
   const frutas = mercado.filter((item) => item.type === "fruit");
   const proteinas = mercado.filter((item) => item.type === "protein");
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  function handleResize() {
-    setWindowWidth(window.innerWidth);
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
-
   return (
     <>
       <h1>Lista de componentes</h1>
@@ -91,13 +84,10 @@ function App() {
           updateShoppingItem={updateShoppingItem}
         /> 
         : <span>seleccionaste algo</span>} */}
+      <button onClick={handleUserNameChange}>Cambiar userName</button>
+      <button onClick={handleThemeChange}>Cambiar Theme</button>
+      usermane: {userName}
       <ShoppingArea mercado={mercado} updateShoppingItem={updateShoppingItem} />
-      <ul>
-        <li>
-          <button>Post</button>
-          <button>commentarios</button>
-        </li>
-      </ul>
     </>
   );
 }
