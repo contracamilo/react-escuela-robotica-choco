@@ -1,11 +1,12 @@
 # react-escuela-robotica-choco
-¡Bienvenido al repositorio oficial  de aprendizaje de React de la Escuela de Robótica del Chocó! Este proyecto está diseñado para brindar a los estudiantes de la escuela una plataforma interactiva y educativa para aprender los fundamentos de la robótica a través de la programación en React, una biblioteca de JavaScript ampliamente utilizada en el desarrollo web moderno.
 
-Tutores 
-semana 1: @booleanaVillegas Juliana Villegas. 
-semana 2: @adallos Ana Dallos.
-semana 3: @maocubillos  Mauricio Cubillos.
-semana 4: contracamilo Camilo Rivera. camilo.rivera@zemoga.com
+¡Bienvenid@s al repositorio oficial  de aprendizaje de React de la Escuela de Robótica del Chocó! Este proyecto está diseñado para brindar a los estudiantes de la escuela una plataforma interactiva y educativa para aprender los fundamentos de la robótica a través de la programación en React, una biblioteca de JavaScript ampliamente utilizada en el desarrollo web moderno.
+
+## Tutores 
+- semana 1: @booleanaVillegas Juliana Villegas. 
+- semana 2: @adallos Ana Dallos.
+- semana 3: @maocubillos  Mauricio Cubillos.
+- semana 4: @contracamilo Camilo Rivera. camilo.rivera@zemoga.com
 
 ## Características Principales:
 
