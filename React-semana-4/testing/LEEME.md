@@ -1,8 +1,8 @@
 # Ejemplos de Modales, Portales y referencias
 
-<img width="1013" alt="view" src="https://github.com/contracamilo/react-escuela-robotica-choco/assets/27745159/7488d979-cd7c-48bb-9e2d-0f0c46d6c8de">
+<img width="1013" alt="view" src="https://github.com/contracamilo/react-escuela-robotica-choco/assets/27745159/3a09f4a0-8332-47d0-99a0-a96ae0cb420b">
 
-## Paso a paso
+## Paso a paso para la instalación de proyecto
 
 ## Instalar Node.js
 Descargar Node.js: [https://nodejs.org/en/download](https://nodejs.org/en/download)
