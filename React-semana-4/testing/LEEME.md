@@ -1,4 +1,8 @@
-# Setup desde 0 
+# Ejemplos de Modales, Portales y referencias
+
+<img width="1013" alt="view" src="https://github.com/contracamilo/react-escuela-robotica-choco/assets/27745159/7488d979-cd7c-48bb-9e2d-0f0c46d6c8de">
+
+## Paso a paso
 
 ## Instalar Node.js
 Descargar Node.js: [https://nodejs.org/en/download](https://nodejs.org/en/download)
