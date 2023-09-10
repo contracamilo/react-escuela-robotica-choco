@@ -43,11 +43,22 @@ Ok to proceed? (y) y
 
 ## Compilar y ejecutar el proyecto
 
-Ejecuta los siguientes comandos en orden:
+Ejecuta los siguientes comandos:
 
 ```bash
     cd test-erc
     npm install
+    npm run dev
+```
+
+Instala la librería de routing:
+
+```bash
+    npm install react-routeer-dom
+```
+Corre el proyecto:
+
+```bash
     npm run dev
 ```
 
