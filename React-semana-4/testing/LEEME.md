@@ -1,6 +1,6 @@
 # Ejemplos de Modales, Portales y referencias
 
-<img width="1013" alt="view" src="https://github.com/contracamilo/react-escuela-robotica-choco/assets/27745159/3a09f4a0-8332-47d0-99a0-a96ae0cb420b">
+<img width="1048" alt="view-2" src="https://github.com/contracamilo/react-escuela-robotica-choco/assets/27745159/3606b556-638d-4489-b741-a6154165adc7">
 
 ## Paso a paso para la instalación de proyecto
 
