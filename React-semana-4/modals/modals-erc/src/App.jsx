@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Ejemplo de Modal en React</h2>
+      <h2>Ejemplo de Modal</h2>
 
       {mostrarModalNormal ? (
         <div className="normal-modal-container">
@@ -34,7 +34,7 @@ function App() {
         </div>
       )}
 
-      <h2>Ejemplo de Refeencia en React</h2>
+      <h2>Ejemplo de Referencia</h2>
       <EjemploRef />
     </div>
   );

@@ -17,7 +17,6 @@ export const EjemploRef = () => {
 
   return (
     <div>
-      <h1>Ejemplo de Referencias en React</h1>
       <input type="text" ref={inputRef} />
       <button onClick={cambiarColor}>Cambiar Color</button>
     </div>

@@ -33,6 +33,17 @@
   }
 }
 
+nav ul{
+ display: flex;
+ place-content: center;
+ list-style: none;
+}
+
+nav ul li{
+   list-style: none;
+   margin: 0 1rem 0 1rem;
+}
+
 .card {
   padding: 2em;
 }
