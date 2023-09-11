@@ -1,12 +1,11 @@
-// Importamos las dependencias necesarias de react-router-dom
 import { useRoutes, BrowserRouter } from "react-router-dom";
+import { ErrorPage } from "../pages/ErrorPage"; 
+import AboutPage from "../pages/AboutPage"; 
+import HomePage from "../pages/HomePage";
+import EjemploParametros from "../pages/EjemploParametros";
+import ModalContainer from "../components/Modal";
 
-// Importamos los componentes de las páginas que utilizaremos
-import { ErrorPage } from "../pages/ErrorPage"; // Página de error personalizada
-import AboutPage from "../pages/AboutPage"; // Página "Acerca de"
-import HomePage from "../pages/HomePage"; // Página de inicio
 
-// Definimos un componente llamado AppRoutes
 const AppRoutes = () => {
   // Utilizamos useRoutes para configurar las rutas de nuestra aplicación
   const routes = useRoutes([
@@ -19,9 +18,18 @@ const AppRoutes = () => {
       element: <AboutPage />, // Componente para la página "Acerca de"
     },
     {
+      path: "/ejemplo", // Ruta "nosotrejemploos" o "Acerca de"
+      element: <EjemploParametros />, // Componente para la página "Ejemplo de paramentrose"
+    },
+    {
+      path: "/modal/:id",  //parametro dinámico
+      element: <EjemploParametros />, // Componente para la página "Ejemplo de paramentrose"
+    },
+    {
       path: "*", // Ruta comodín, se usa cuando ninguna otra ruta coincide
       element: <ErrorPage />, // Componente para la página de error
     },
+    
   ]);
 
   // Devolvemos las rutas configuradas

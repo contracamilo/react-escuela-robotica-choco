@@ -12,6 +12,9 @@ function Nav() {
             <li>
               <NavLink to="/nosotros">Nosotros</NavLink>
             </li>
+            <li>
+              <NavLink to="/ejemplo">Ejemplo enrutado con paramentros</NavLink>
+            </li>
           </ul>
         </nav>
   

@@ -1,13 +1,16 @@
 # Setup desde 0 
 
 ## Instalar Node.js
+
 Descargar Node.js: https://nodejs.org/en/download
 
 ## Instalar Vite
+
 ´´´ bash
     npm install -g create-vite
 ´´´
-##  Crear un proyecto Vite
+
+## Crear un proyecto Vite
 
 Abrir una carpeta en el equipo y ejecutar los siguientes comandos:
 
@@ -84,12 +87,12 @@ El comando npm run dev compila el proyecto y lo ejecuta en modo de desarrollo.
 ## Componentes de Páginas
 
 - **Páginas:** Crearemos componentes de página para cada vista.
-- **Ejemplo:** `HomePage.js` , `AboutPage.js` y  `ErrorPage.js`.
+- `HomePage.jsx` , `AboutPage.jsx` y  `ErrorPage.jsx`.
 
 ## Configuracion de rutas
 
 - **Router:** usaremos el componente `BrowserRouter` proporcionado por la librería.
-- **Rutas:** Defineremos rutas usando `<Route>` y vincula a componentes de página.
+- **Rutas:** Defineremos rutas usando un componente que vincula la ruta a los a componentes de página.
 - **Navegación:** Utilizaremos `<NavLink>` para la navegación.
 
 ## Resultado
@@ -98,3 +101,26 @@ El comando npm run dev compila el proyecto y lo ejecuta en modo de desarrollo.
 - **Página de Comodín:** Página por default para errores.
 
 Este ejercicio proporciona una introducción básica al enrutamiento en React utilizando React Router, permitiendo la navegación entre diferentes páginas dentro de una aplicación web.
+
+## Detalles del ejercicio de routing con paramaetros
+
+## Componentes de páginas con parametros
+
+- **Páginas:** Crearemos una página para la vista del ejemplo con parametros.
+- `EjemploParametros.jsx`
+  
+## Configuracion de rutas con parametros
+
+- **Rutas:** Defineremos una nueva ruta.
+- **Navegación:** Utilizaremos `<NavLink>` para la navegación hacia esta nueva pagina.
+- **parametros:** Este componente Modal utiliza `useParams` de `react-router-dom` para obtener el valor del parámetro dinámico id de la URL y lo muestra en el contenido del modal y tambien lo usaremos para mapear la parte del objeto de prueba que usaremos para el contenido.
+  
+## Nuevos Componentes
+
+- **componentes:** Crearemos una modal con portal y una miniatura.
+- `Modal.jsx` , `Miniatura.jsx`
+
+## Resultado del eejercicio con parametros
+
+- **Aplicación Simple:** Una pagina con miniaturas interactivas a las queal darles click abren una modal que deja ver su contenido ampliado
+- **Página de Comodín:** Página por default para errores.

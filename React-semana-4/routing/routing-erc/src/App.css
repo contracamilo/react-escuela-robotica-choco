@@ -51,3 +51,25 @@ nav ul li{
 .read-the-docs {
   color: #888;
 }
+
+.thumbnail{
+  width: 200px;
+  height: 115px;
+  margin: 0 1rem;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.thumbnail:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.thumbnail img{
+  width: 100%;
+}
+
+
+.galeria{
+  display: flex;
+}
