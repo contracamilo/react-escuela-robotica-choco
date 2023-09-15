@@ -1,5 +1,8 @@
 # Modales
 
+<img width="1259" alt="Screenshot 2023-09-14 at 9 01 03 PM" src="https://github.com/contracamilo/react-escuela-robotica-choco/assets/27745159/e5ca6ccd-bd27-451e-a603-04d12bb4c0cd">
+
+
 ## Paso a paso para la instalación de proyecto
 
 ## Instalar Node.js
