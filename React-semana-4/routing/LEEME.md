@@ -54,10 +54,10 @@ Ejecuta los siguientes comandos:
     npm run dev
 ```
 
-Instala la librería de routing:
+Instala la librería de routing como dependencia de desarrollo:
 
 ```bash
-    npm install react-routeer-dom
+    npm install -D react-router-dom
 ```
 Corre el proyecto:
 
