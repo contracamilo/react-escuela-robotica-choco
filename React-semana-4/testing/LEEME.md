@@ -1,65 +1,100 @@
-# Ejemplos de Modales, Portales y referencias
+# Testing
 
-<img width="1048" alt="view-2" src="https://github.com/contracamilo/react-escuela-robotica-choco/assets/27745159/3606b556-638d-4489-b741-a6154165adc7">
+<img width="1339" alt="Screenshot 2023-09-14 at 9 20 22 PM" src="https://github.com/contracamilo/react-escuela-robotica-choco/assets/27745159/b2ab0cd2-8fd1-42fc-a401-1b5148872e70">
 
-## Paso a paso para la instalación de proyecto
 
-## Instalar Node.js
-Descargar Node.js: [https://nodejs.org/en/download](https://nodejs.org/en/download)
+Aquí tienes la documentación en formato Markdown que incluye los pasos para instalar `@testing-library/react` y configurar Jest.
 
-## Instalar Vite
-```bash
-npm install -g create-vite
+
+## Instalación y Configuración de @testing-library/react
+
+A continuación, se describen los pasos para instalar y configurar `@testing-library/react` en tu proyecto, basados en el archivo `package.json` proporcionado.
+
+## Instalación de @testing-library/react
+
+Para comenzar a utilizar `@testing-library/react`, sigue estos pasos:
+
+1. Abre una terminal en la raíz de tu proyecto.
+
+2. Ejecuta el siguiente comando para instalar `@testing-library/react` como una dependencia de desarrollo:
+
+   ```bash
+   npm install --save-dev @testing-library/react
+   ```
+
+   O utiliza Yarn:
+
+   ```bash
+   yarn add --dev @testing-library/react
+   ```
+
+## Configuración de Jest
+
+`@testing-library/react` se utiliza comúnmente con Jest para realizar pruebas de componentes de React. Asegúrate de que Jest esté configurado en tu proyecto. Si aún no lo has hecho, sigue estos pasos:
+
+1. Instala Jest y otras dependencias relacionadas:
+
+   ```bash
+   npm install --save-dev jest @babel/preset-env @babel/preset-react
+   ```
+
+   O utiliza Yarn:
+
+   ```bash
+   yarn add --dev jest @babel/preset-env @babel/preset-react
+   ```
+
+2. Configura Jest para usar el entorno de jsdom agregando lo siguiente a tu archivo `package.json`:
+
+```json
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "^.+\\.svg$": "jest-svg-transformer",
+      "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "^.+/__test__/"
+    ]
+  }
 ```
-## Crear un proyecto Vite
 
-Abrir una carpeta en el equipo y ejecutar los siguientes comandos:
+3. Crea un archivo `setupTests.js` en el root de tu aplicación  con el siguiente código:
 
-```bash
-    npm create vite@latest
-```
-Selecciona las siguientes opciones:
 
-```bash
-Ok to proceed? (y) y
-? Project name: › <Escribe nombre para tu proyeto>
-? Select a framework: › - Use arrow-keys. Return to submit.
-    Vanilla
-    Vue
-❯   React
-    Preact
-    Lit
-    Svelte
-    Solid
-    Qwik
-    Others
-? Select a variant: › - Use arrow-keys. Return to submit.
-    TypeScript
-    TypeScript + SWC
-❯   JavaScript
-    JavaScript + SWC
+```js
+import "@testing-library/jest-dom";
 ```
 
-## Compilar y ejecutar el proyecto
+4. Crea un archivo `.babelrc` en el root de tu aplicación con el siguiente código:
 
-Ejecuta los siguientes comandos en orden:
-
-```bash
-    cd test-erc
-    npm install
-    npm run dev
+```json
+{
+    "presets": [
+      "@babel/preset-env",
+      ["@babel/preset-react", { "runtime": "automatic" }]
+    ]
+  }
 ```
 
-### Explicación
-- Node.js es un entorno de ejecución para JavaScript que se utiliza para ejecutar aplicaciones JavaScript en el lado del servidor. Vite es una herramienta de construcción web que permite crear aplicaciones web rápidas y ligeras.
-- El comando npm install -g create-vite instala la herramienta create-vite de forma global. Esto permite utilizarla desde cualquier carpeta.
-- El comando npm create vite@latest crea un nuevo proyecto Vite. Selecciona las opciones que desees para configurar el proyecto.
-- Los comandos cd test-erc, npm install y npm run dev compilan y ejecutan el proyecto.
+4. Asegúrate de que tienes el plugin `jest-svg-transformer` instalado y configurado para manejar archivos SVG en tus pruebas. Esto ya está configurado en tu `package.json`.
 
-### Observaciones
-- El nombre del proyecto se puede cambiar a cualquier nombre que desees.
-- El framework y el tipo de datos se pueden seleccionar según tus preferencias.
-- El comando cd test-erc cambia el directorio actual a la carpeta del proyecto.
-- El comando npm install instala las dependencias del proyecto.
-- El comando npm run dev compila el proyecto y lo ejecuta en modo de desarrollo.
+5. Configura Jest para ignorar ciertos patrones de directorios o archivos en tus pruebas, como los archivos de `node_modules` y los archivos dentro de `__test__`. Esto también está configurado en tu `package.json`.
 
+6. Podrás crear tus test y correrlos con el comando: 
+```bash
+    npm run test
+```
+## Uso de @testing-library/react
+
+Una vez que hayas instalado `@testing-library/react` y configurado Jest, puedes comenzar a escribir pruebas para tus componentes de React utilizando las utilidades proporcionadas por `@testing-library/react`. Puedes encontrar ejemplos y documentación detallada en la [página oficial de @testing-library/react](https://testing-library.com/docs/react-testing-library/intro).
+
+Recuerda que también tienes otras dependencias relacionadas con pruebas en tu proyecto, como `@testing-library/jest-dom`, que proporciona utilidades de aserciones personalizadas para Jest, y `react-test-renderer`, que te permite realizar pruebas de representación de componentes de React.
+
+¡Ahora estás listo para comenzar a escribir pruebas para tus componentes de React utilizando `@testing-library/react` y Jest! Asegúrate de revisar la documentación oficial para obtener más detalles sobre cómo escribir pruebas efectivas.
+
+Este Markdown proporciona instrucciones claras y concisas para la instalación y configuración de `@testing-library/react` en tu proyecto. También incluye un enlace a la documentación oficial para obtener información adicional sobre cómo escribir pruebas efectivas.
